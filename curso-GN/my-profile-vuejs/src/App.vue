@@ -3,9 +3,16 @@
 </script>
 
 <template>
-<h1>Oi</h1>
+  <div class="teste">
+    <h1>Oi</h1>
+  </div>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .teste {
+    background-color: $red;
+    h1 {
+      color: $green
+    }
+  }
 </style>
