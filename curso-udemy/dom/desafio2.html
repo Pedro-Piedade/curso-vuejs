@@ -1,0 +1,38 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+  <div>
+    <button @click="alerta">Alertar</button>
+  </div>
+
+  <div>
+    <input @keydown="passaValor" type="text">
+    <p>{{ valor }}</p>
+  </div>
+
+  <div>
+    <input @keydown.enter="passaValor" type="text">
+    <p>{{ valor }}</p>
+  </div>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+  
+    data: {
+      valor: 0,
+    },
+
+    methods: {
+      alerta(){
+        alert('GG MLK')
+      },
+
+      passaValor(event) {
+        console.log(event);
+        this.valor = event.target.value;
+      }
+    }
+  })
+</script>
