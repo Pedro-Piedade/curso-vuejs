@@ -2,7 +2,7 @@
 
 <div id="app">
   <p>{{ contador }}</p>
-  <button @click="somar">Soma</button>
+  <button @click="somar(10, $event)">Soma</button>
   <p @mousemove="atualizarXY">Mouse {{ x }} e {{ y }}</p>
 </div>
 
@@ -17,9 +17,9 @@
     },
 
     methods: {
-      somar(e){
-        console.log(e);
-        this.contador++;
+      somar(numero){
+        console.log(numero);
+        this.contador += numero;
       },
 
       atualizarXY(e){
