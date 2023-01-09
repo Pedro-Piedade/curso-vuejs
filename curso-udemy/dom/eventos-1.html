@@ -8,6 +8,8 @@
     <span @mousemove.stop="">PARAR AQUI!!!</span>
   </p>
   <a @click.prevent href="http://gogle.com">Google</a>
+  <hr>
+  <input type="text" @keyup.enter.alt="alert">
 </div>
 
 <script>
@@ -30,6 +32,10 @@
         console.log(e);
         this.x = e.clientX
         this.y = e.clientY
+      },
+
+      alert(){
+        alert('Estou alertando');
       }
     }
   })
