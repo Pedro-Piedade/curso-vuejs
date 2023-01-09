@@ -3,7 +3,11 @@
 <div id="app">
   <p>{{ contador }}</p>
   <button @click="somar(10, $event)">Soma</button>
-  <p @mousemove="atualizarXY">Mouse {{ x }} e {{ y }}</p>
+  <p @mousemove="atualizarXY">
+    Mouse {{ x }} e {{ y }}
+    <span @mousemove.stop="">PARAR AQUI!!!</span>
+  </p>
+  <a @click.prevent href="http://gogle.com">Google</a>
 </div>
 
 <script>
